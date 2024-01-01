@@ -113,7 +113,7 @@ endif()
 
 
 # Create library target
-add_library(angle_shader_translator STATIC
+add_library(angle_shader_translator STATIC EXCLUDE_FROM_ALL
             ${sources})
 
 set_property(TARGET angle_shader_translator PROPERTY CXX_STANDARD 14)
@@ -134,7 +134,7 @@ endif()
 
 
 # Create sample executable target
-add_executable(shader_translator_sample samples/shader_translator/shader_translator.cpp)
+add_executable(shader_translator_sample EXCLUDE_FROM_ALL samples/shader_translator/shader_translator.cpp)
 target_include_directories(shader_translator_sample PRIVATE include)
 
 target_link_libraries(shader_translator_sample angle_shader_translator)
