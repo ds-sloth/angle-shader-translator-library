@@ -126,6 +126,7 @@ target_include_directories(angle_shader_translator PUBLIC export)
 target_compile_definitions(angle_shader_translator PRIVATE ${defines})
 
 if(_uses_spirv)
+  message("Attempting to include SPIRV repositories (you need to clone these yourself)")
   add_subdirectory(3rdparty/SPIRV-Headers)
   add_subdirectory(3rdparty/SPIRV-Tools)
   target_link_libraries(angle_shader_translator PRIVATE SPIRV-Headers)
