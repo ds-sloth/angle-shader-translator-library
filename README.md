@@ -21,6 +21,9 @@ I may synchronize this distribution from time to time with the upstream ANGLE pr
 if any software utilizing it notices bugs that have been fixed upstream. The current revision is
 synchronized with upstream commit 09c69b5b5cb987ff236fe11929a780a116a7a8bd.
 
+Unlike https://github.com/ds-sloth/angle-shader-translator-library, this repository does not share
+any history with the upstream ANGLE repository. It is thus much faster to clone for downstream CIs.
+
 # ANGLE - Almost Native Graphics Layer Engine
 
 The goal of ANGLE is to allow users of multiple operating systems to seamlessly run WebGL and other
