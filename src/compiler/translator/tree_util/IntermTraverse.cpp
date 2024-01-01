@@ -296,7 +296,7 @@ void TIntermTraverser::insertStatementsInBlockAtPosition(TIntermBlock *parent,
                                                          const TIntermSequence &insertionsAfter)
 {
     ASSERT(parent);
-    ASSERT(position >= 0);
+    // ASSERT(position >= 0); // is unsigned
     ASSERT(position < parent->getChildCount());
 
     mInsertions.emplace_back(parent, position, insertionsBefore, insertionsAfter);
