@@ -1,0 +1,101 @@
+# Copyright 2013 The ANGLE Project Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# THIS IS A CMake FILE AND NOT A gni FILE. It is here to facilitate updating the build using git.
+
+set(libangle_common_headers
+  src/common/BinaryStream.h
+  src/common/CircularBuffer.h
+  src/common/Color.h
+  src/common/Color.inc
+  src/common/CompiledShaderState.h
+  src/common/FastVector.h
+  src/common/FixedQueue.h
+  src/common/FixedVector.h
+  src/common/MemoryBuffer.h
+  src/common/Optional.h
+  src/common/PackedEGLEnums_autogen.h
+  src/common/PackedEnums.h
+  src/common/PackedGLEnums_autogen.h
+  src/common/PoolAlloc.h
+  src/common/RingBufferAllocator.h
+  src/common/Spinlock.h
+  src/common/SynchronizedValue.h
+  src/common/WorkerThread.h
+  src/common/aligned_memory.h
+  src/common/android_util.h
+  src/common/angleutils.h
+  src/common/apple_platform_utils.h
+  src/common/backtrace_utils.h
+  src/common/base/anglebase/base_export.h
+  src/common/base/anglebase/containers/mru_cache.h
+  src/common/base/anglebase/logging.h
+  src/common/base/anglebase/macros.h
+  src/common/base/anglebase/no_destructor.h
+  src/common/base/anglebase/numerics/checked_math.h
+  src/common/base/anglebase/numerics/checked_math_impl.h
+  src/common/base/anglebase/numerics/clamped_math.h
+  src/common/base/anglebase/numerics/clamped_math_impl.h
+  src/common/base/anglebase/numerics/math_constants.h
+  src/common/base/anglebase/numerics/ranges.h
+  src/common/base/anglebase/numerics/safe_conversions.h
+  src/common/base/anglebase/numerics/safe_conversions_arm_impl.h
+  src/common/base/anglebase/numerics/safe_conversions_impl.h
+  src/common/base/anglebase/numerics/safe_math.h
+  src/common/base/anglebase/numerics/safe_math_arm_impl.h
+  src/common/base/anglebase/numerics/safe_math_clang_gcc_impl.h
+  src/common/base/anglebase/numerics/safe_math_shared_impl.h
+  src/common/base/anglebase/sha1.h
+  src/common/base/anglebase/sys_byteorder.h
+  src/common/bitset_utils.h
+  src/common/debug.h
+  src/common/entry_points_enum_autogen.h
+  src/common/event_tracer.h
+  src/common/hash_utils.h
+  src/common/mathutil.h
+  src/common/matrix_utils.h
+  src/common/platform.h
+  src/common/platform_helpers.h
+  src/common/string_utils.h
+  src/common/system_utils.h
+  src/common/tls.h
+  src/common/utilities.h
+  src/common/vector_utils.h
+)
+
+set(libangle_common_sources
+  src/common/Float16ToFloat32.cpp
+  src/common/MemoryBuffer.cpp
+  src/common/PackedEGLEnums_autogen.cpp
+  src/common/PackedEnums.cpp
+  src/common/PackedGLEnums_autogen.cpp
+  src/common/PoolAlloc.cpp
+  src/common/RingBufferAllocator.cpp
+  src/common/WorkerThread.cpp
+  src/common/aligned_memory.cpp
+  src/common/android_util.cpp
+  src/common/angleutils.cpp
+  src/common/base/anglebase/sha1.cc
+  src/common/debug.cpp
+  src/common/entry_points_enum_autogen.cpp
+  src/common/event_tracer.cpp
+  src/common/mathutil.cpp
+  src/common/matrix_utils.cpp
+  src/common/platform_helpers.cpp
+  src/common/string_utils.cpp
+  src/common/system_utils.cpp
+  src/common/tls.cpp
+  src/common/uniform_type_info_autogen.cpp
+  src/common/utilities.cpp
+)
+
+set(libangle_common_shader_state_sources
+  src/common/CompiledShaderState.cpp
+)
+
+set(xxhash_sources
+  src/common/third_party/xxhash/xxhash.c
+  src/common/third_party/xxhash/xxhash.h
+)
+
