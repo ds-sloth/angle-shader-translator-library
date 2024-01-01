@@ -595,7 +595,7 @@ void CompiledShaderState::deserialize(gl::BinaryInputStream &stream)
             stream.readBool(&valid);
             if (valid)
             {
-                unsigned char value;
+                unsigned char value = 0;
                 stream.readBytes(&value, 1);
                 geometryShaderInputPrimitiveType = static_cast<gl::PrimitiveMode>(value);
             }
@@ -607,7 +607,7 @@ void CompiledShaderState::deserialize(gl::BinaryInputStream &stream)
             stream.readBool(&valid);
             if (valid)
             {
-                unsigned char value;
+                unsigned char value = 0;
                 stream.readBytes(&value, 1);
                 geometryShaderOutputPrimitiveType = static_cast<gl::PrimitiveMode>(value);
             }
