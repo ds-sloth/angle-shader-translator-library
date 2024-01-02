@@ -22,7 +22,7 @@ set(angle_translator_sources
   include/GLES3/gl31.h
   include/GLES3/gl32.h
   include/GLES3/gl3platform.h
-  include/KHR/khrplatform.h
+  export/KHR/khrplatform.h
   include/angle_gl.h
   src/compiler/translator/BaseTypes.cpp
   src/compiler/translator/BaseTypes.h
