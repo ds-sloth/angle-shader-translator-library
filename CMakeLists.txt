@@ -35,6 +35,7 @@ include(src/libGLESv2.gni)
 include(src/libGLESv2.gni)
 include(src/common/spirv/BUILD.gn)
 
+
 # Internal configuration logic
 
 set(sources ${angle_translator_sources} ${angle_preprocessor_sources} ${libangle_common_sources} ${libangle_common_headers} ${libangle_common_shader_state_sources})
@@ -109,6 +110,10 @@ endif()
 
 if(_uses_spirv)
   list(APPEND sources ${angle_spirv_headers} ${angle_spirv_base} ${angle_spirv_builder} ${xxhash_sources})
+endif()
+
+if(WIN32)
+  list(APPEND defines STRICT WIN32_LEAN_AND_MEAN NOMINMAX)
 endif()
 
 
