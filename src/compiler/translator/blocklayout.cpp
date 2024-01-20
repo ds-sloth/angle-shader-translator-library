@@ -276,7 +276,7 @@ void BlockLayoutEncoder::align(size_t baseAlignment)
     checkedAlignmentOffset %= baseAlignment;
     checkedOffset -= checkedAlignmentOffset.ValueOrDefault(std::numeric_limits<size_t>::max());
     mCurrentOffset = checkedOffset.ValueOrDefault(std::numeric_limits<size_t>::max());
-    assert(mCurrentOffset >= 0);
+    // assert(mCurrentOffset >= 0); // FIXME: Always >= 0 because of unsigned type
 }
 
 // StubBlockEncoder implementation.
