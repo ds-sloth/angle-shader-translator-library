@@ -222,20 +222,30 @@ std::ostream &FmtHex(std::ostream &os, T value)
 // better to have compact code for these operations.
 #define COMPACT_ANGLE_LOG_EX_EVENT(ClassName, ...) \
     ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_EVENT, ##__VA_ARGS__)
+#define COMPACT_ANGLE_LOG_EX_EVENT_NA(ClassName) \
+    ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_EVENT)
 #define COMPACT_ANGLE_LOG_EX_INFO(ClassName, ...) \
     ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_INFO, ##__VA_ARGS__)
+#define COMPACT_ANGLE_LOG_EX_INFO_NA(ClassName) \
+    ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_INFO)
 #define COMPACT_ANGLE_LOG_EX_WARN(ClassName, ...) \
     ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_WARN, ##__VA_ARGS__)
+#define COMPACT_ANGLE_LOG_EX_WARN_NA(ClassName) \
+    ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_WARN)
 #define COMPACT_ANGLE_LOG_EX_ERR(ClassName, ...) \
     ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_ERR, ##__VA_ARGS__)
+#define COMPACT_ANGLE_LOG_EX_ERR_NA(ClassName) \
+    ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_ERR)
 #define COMPACT_ANGLE_LOG_EX_FATAL(ClassName, ...) \
-    ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_FATAL, ##__VA_ARGS__)
+    ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_FATAL, __VA_ARGS__)
+#define COMPACT_ANGLE_LOG_EX_FATAL_NA(ClassName) \
+    ::gl::ClassName(__FILE__, __FUNCTION__, __LINE__, ::gl::LOG_FATAL)
 
-#define COMPACT_ANGLE_LOG_EVENT COMPACT_ANGLE_LOG_EX_EVENT(LogMessage)
-#define COMPACT_ANGLE_LOG_INFO COMPACT_ANGLE_LOG_EX_INFO(LogMessage)
-#define COMPACT_ANGLE_LOG_WARN COMPACT_ANGLE_LOG_EX_WARN(LogMessage)
-#define COMPACT_ANGLE_LOG_ERR COMPACT_ANGLE_LOG_EX_ERR(LogMessage)
-#define COMPACT_ANGLE_LOG_FATAL COMPACT_ANGLE_LOG_EX_FATAL(LogMessage)
+#define COMPACT_ANGLE_LOG_EVENT COMPACT_ANGLE_LOG_EX_EVENT_NA(LogMessage)
+#define COMPACT_ANGLE_LOG_INFO COMPACT_ANGLE_LOG_EX_INFO_NA(LogMessage)
+#define COMPACT_ANGLE_LOG_WARN COMPACT_ANGLE_LOG_EX_WARN_NA(LogMessage)
+#define COMPACT_ANGLE_LOG_ERR COMPACT_ANGLE_LOG_EX_ERR_NA(LogMessage)
+#define COMPACT_ANGLE_LOG_FATAL COMPACT_ANGLE_LOG_EX_FATAL_NA(LogMessage)
 
 #define ANGLE_LOG_IS_ON(severity) (::gl::priv::ShouldCreatePlatformLogMessage(::gl::LOG_##severity))
 
