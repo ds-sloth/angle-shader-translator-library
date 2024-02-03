@@ -4944,7 +4944,7 @@ namespace BuiltInId
     static constexpr const TSymbolUniqueId gl_ClipDistance              = TSymbolUniqueId::at_symtab(3094);
     static constexpr const TSymbolUniqueId gl_CullDistance              = TSymbolUniqueId::at_symtab(3095);
 
-};  // namespace BuiltInId
+}  // namespace BuiltInId
 
 namespace BuiltInVariable
 {
