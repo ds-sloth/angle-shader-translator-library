@@ -761,7 +761,7 @@ class RewritePLSToFramebufferFetchTraverser : public RewritePLSTraverser
             {
                 default:
                     UNREACHABLE();
-                    [[fallthrough]];
+                    // fallthrough
                 case EiifRGBA8:
                     accessVarType = new TType(EbtFloat, 4);
                     break;
@@ -863,7 +863,7 @@ class RewriteANGLEToEXTTraverser : public RewritePLSTraverser
             {
                 default:
                     UNREACHABLE();
-                    [[fallthrough]];
+                    // fallthrough
                 case EiifRGBA8:
                     typeEXT = new TType(EbtFloat, 4);
                     break;
