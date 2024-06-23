@@ -713,7 +713,7 @@ IF YOU MODIFY THIS FILE YOU ALSO NEED TO RUN scripts/run_code_generation.py
 #endif
 
 // Workaround for flex using the register keyword, deprecated in C++11.
-#ifdef __cplusplus
+#if 0 //def __cplusplus // No longer needed
 #    if __cplusplus > 199711L
 #        define register
 #    endif
